@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+	window.onload = inicio;
+    let outro = 1;
+
+	function inicio() {
+	    let botao = document.getElementById('botaoSoma');
+	    botao.addEventListener('click', soma);
+
+        let botaoSub = document.getElementById('botaoSub');
+        botaoSub.addEventListener('click', subtrai)
+
+        let botaoDiv = document.getElementById('botaoDiv');
+        botaoDiv.addEventListener('click', divisao)
+
+        let botaoExpo = document.getElementById('botaoExpo');
+        botaoExpo.addEventListener('click', expo)
+        
+        let botaoResto = document.getElementById('botaoResto');
+        botaoResto.addEventListener('click', resto)
+
+        let botaoIncremento = document.getElementById('botaoIncremento');
+        botaoIncremento.addEventListener('click', incremento)
+
+        let botaoDecremento = document.getElementById('botaoDecremento');
+        botaoDecremento.addEventListener('click', decremento)
+	}
+
+    function soma() {
+	let saida = document.getElementById('saida1');
+	let x = 7;
+	let y = 3;
+	saida.innerHTML = x + y;
+    }
+
+    function subtrai() {
+	let saida = document.getElementById('saida2');
+	let x = 7;
+	let y = 3;
+	saida.innerHTML = x - y;
+    }
+
+    function divisao() {
+	let saida = document.getElementById('saida3');
+	let x = 7;
+	let y = 3;
+	saida.innerHTML = x / y;
+    }
+
+    function expo() {
+	let saida = document.getElementById('saida4');
+	let x = 7;
+	let y = 3;
+	saida.innerHTML = x ** y;
+    }
+
+    function resto() {
+	let saida = document.getElementById('saida5');
+	let x = 7;
+	let y = 3;
+	saida.innerHTML = x % y;
+    }
+
+    function incremento() {
+	let saida = document.getElementById('saida6');
+	saida.innerHTML = outro++;
+    }
+
+    function decremento() {
+	let saida = document.getElementById('saida6');
+	saida.innerHTML = outro--;
+    }
+    
+
+
+    </script>
+</head>
+<body>
+
+    <p id="saida1">JS esperando evento</p>
+    <input type="button" value="+" id="botaoSoma">
+    <p id="saida2">JS esperando evento</p>
+    <input type="button" value="-" id="botaoSub">
+    <p id="saida3">JS esperando evento</p>
+    <input type="button" value="/" id="botaoDiv">
+    <p id="saida4">JS esperando evento</p>
+    <input type="button" value="**" id="botaoExpo">
+    <p id="saida5">JS esperando evento</p>
+    <input type="button" value="%" id="botaoResto">
+    <p id="saida6">1</p>
+    <input type="button" value="++" id="botaoIncremento">
+    <input type="button" value="--" id="botaoDecremento">
+</body>
+</html>
